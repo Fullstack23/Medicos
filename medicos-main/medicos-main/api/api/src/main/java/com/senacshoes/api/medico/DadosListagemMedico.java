@@ -1,10 +1,10 @@
 package com.senacshoes.api.medico;
 
-public record DadosListagemMedico(String nome, String email,String crm, 
+public record DadosListagemMedico(Long id,String nome, String email,String crm, 
 Especialidades especialide) {
 
     public DadosListagemMedico(Medico medico){
-        this(medico.getNome(), medico.getEmail(), medico.getCrm(), 
+        this( medico.getId(),medico.getNome(), medico.getEmail(), medico.getCrm(), 
         medico.getEspecialidade());
         
     }
